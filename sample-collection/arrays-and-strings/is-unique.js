@@ -2,7 +2,7 @@
 //What if you cannot use additional data structures?
 
 const isUniqueChars = (str) => {
-    //Hash list
+    // Hashset
     // create an big array w/ ASCII capacity length 
     let hashArr = new Array(128);
     //alternatively, in JS we don't need to set the array length.
