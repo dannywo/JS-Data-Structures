@@ -130,7 +130,7 @@ class LinkedList {
                 return current.data
             }
             //find data by id
-            if (data.id === current.data.id) {
+            if (data === current.data) {
 
                 //remove element
                 previous.next = current.next;
@@ -147,11 +147,28 @@ class LinkedList {
         return -1;
     }
 
+    //indexOf(element)
+    indexOf(data) {
+        let current = this.head,
+            previous,
+            index = 0;
+        while (index < this.size) {
+            if (current.data === data) {
+                return index;
+            }
+            current = current.next;
+            previous = current;
+            index++;
+        }
+
+        return -1;
+    }
+
 
     //Helper functions
     // isEmpty
     isEmpty() {
-        return this.size === 0 ? true : false;
+        return this.size === 0;
     }
 
     // listSize
@@ -163,13 +180,13 @@ class LinkedList {
     printList() {
         let current = this.head,
             previous,
-            startIndex = 0;
-        while (startIndex < this.size) {
-            console.log(current.data)
+            str = "";
+        while (current) {
+            str += `${current.data.name} you're currently ${this.indexOf(current.data) + 1} in the queue. \n`;
             previous = current;
             current = current.next;
-            startIndex++;
         }
+        return str;
     }
 }
 
@@ -207,4 +224,4 @@ queue.removeFrom(5);
 // console.log(queue.head.data)
 // console.log(queue.head.next.data)
 
-queue.printList();
+console.log(queue.printList());
