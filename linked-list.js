@@ -153,8 +153,24 @@ class LinkedList {
     isEmpty() {
         return this.size === 0 ? true : false;
     }
+
     // listSize
+    listSize() {
+        return this.size;
+    }
+
     // printList
+    printList() {
+        let current = this.head,
+            previous,
+            startIndex = 0;
+        while (startIndex < this.size) {
+            console.log(current.data)
+            previous = current;
+            current = current.next;
+            startIndex++;
+        }
+    }
 }
 
 let guest1 = {
@@ -182,11 +198,13 @@ queue.add(guest2);
 queue.insertAt(guest3, 2);
 queue.removeFrom(5);
 
-console.log(queue.head.data)
-console.log(queue.head.next.data)
-console.log(queue.head.next.next.data)
+// console.log(queue.head.data)
+// console.log(queue.head.next.data)
+// console.log(queue.head.next.next.data)
 
-queue.removeElement(guest2);
+// queue.removeElement(guest2);
 
-console.log(queue.head.data)
-console.log(queue.head.next.data)
+// console.log(queue.head.data)
+// console.log(queue.head.next.data)
+
+queue.printList();
