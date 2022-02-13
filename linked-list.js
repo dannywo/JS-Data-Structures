@@ -150,26 +150,28 @@ class LinkedList {
 
     //Helper functions
     // isEmpty
-
+    isEmpty() {
+        return this.size === 0 ? true : false;
+    }
     // listSize
     // printList
 }
 
 let guest1 = {
     id: 1,
-    name: 'Zayn D Orellana',
+    name: 'Zayn O',
     time: new Date(),
     partySize: 4
 },
     guest2 = {
         id: 2,
-        name: 'Nadia Taha',
+        name: 'Nadia T',
         time: new Date(),
         partySize: 2
     },
     guest3 = {
         id: 3,
-        name: 'Danny Orellana',
+        name: 'Danny O',
         time: new Date(),
         partySize: 2
     };
