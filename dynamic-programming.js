@@ -17,7 +17,7 @@ function fibo(num) {
     return result
 
 }
-console.log(fibo(45))
+console.log(fibo(10))
 
 //memoization
 let memo = new Array();
@@ -35,7 +35,7 @@ function memoFibo(num) {
     return result
 }
 
-console.log(memoFibo(45))
+console.log(memoFibo(10))
 
 //bottom-up approach
 function bottomUpFib(num) {
