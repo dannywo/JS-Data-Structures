@@ -17,7 +17,12 @@ function fibo(num) {
     return result
 
 }
-console.log(fibo(10))
+let startTime = new Date();
+console.log(fibo(20))
+let endTime = new Date(),
+    completionTime = (endTime.getTime() - startTime.getTime()) / 1000;
+console.log(`Completion time: ${completionTime}`)
+
 
 //memoization
 let memo = new Array();
@@ -34,8 +39,13 @@ function memoFibo(num) {
     memo[num] = result
     return result
 }
+startTime = new Date();
+console.log(memoFibo(20))
 
-console.log(memoFibo(10))
+endTime = new Date();
+completionTime = (endTime.getTime() - startTime.getTime()) / 1000;
+console.log(`Completion time: ${completionTime}`)
+
 
 //bottom-up approach
 function bottomUpFib(num) {
@@ -54,7 +64,11 @@ function bottomUpFib(num) {
     return bottomUpArr[num];
 }
 
-console.log(bottomUpFib(100))
+startTime = new Date();
+console.log(bottomUpFib(1000))
+endTime = new Date()
+completionTime = (endTime.getTime() - startTime.getTime()) / 1000;
+console.log(`Completion time: ${completionTime}`)
 
 /**
  * End Fibo Examples
