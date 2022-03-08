@@ -13,7 +13,7 @@ const qs = (arr, left, right) => {
 }
 
 const partition = (arr, left, right) => {
-  pivot = arr[right];
+  let pivot = arr[right];
 
   let i = left - 1;
   for (let index = left; index < right; index++) {
