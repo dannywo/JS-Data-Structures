@@ -68,7 +68,7 @@ const dfs = (start, visited = new Set()) => {
 
     visited.add(start);
     const destinations = adjacencyList.get(start);
-    console.log(start)
+    console.log(start);
     for (const destination of destinations) {
         if (destination === 'BKK') {
             console.log('DFS found Bangkok');
