@@ -3,6 +3,8 @@
  * @param {Array<int>} sortedArr 
  * @param {Int} target 
  * @returns {boolean}
+ * @description binary search function, given an array, locate the
+ *              target by continously halfing the array
  */
 const binarySearch = (sortedArr, target) => {
     let left = 0,
